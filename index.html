@@ -80,7 +80,7 @@
     </div>
 
     <div class="caixa formulario">
-      <form>
+      <form id="formulario_contato" method="POST">
         <label for="formulario_nome_input" ></label>
         <input type="text" id = "formulario_nome_input" name = "formulario_nome_input" required>
         
@@ -88,13 +88,13 @@
         <input type="text" id = "formulario_email_input" name="formulario_email_input" required>
         
         <label for="formulario_mensagem_input"></label>
-        <textarea id = "formulario_caixaTexto_input" rows="4" cols="50" placeholder ="Digite algo..."></textarea>
+        <textarea id = "formulario_mensagem_input" rows="4" cols="50" placeholder ="Digite algo..."></textarea>
         <button type="submit" id="formulario_botao_enviar">Enviar</button>
       </form>
     </div>
 
   </div>
-  <script src="script.js"></script>
+  <script src="script.js" type="module"></script>
 </body>
 
 <footer>
