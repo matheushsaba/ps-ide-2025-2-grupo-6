@@ -1,13 +1,15 @@
 /* variáveis de cor */
 
 :root {
-    --cor-fundo-cabecalho-rodape: #a188eb;
+    --cor-fundo-cabecalho: #a188eb;
     --cor-texto-branco: #ffffff;
     --cor-texto-titulo: #414141;
     --cor-texto-paragrafo: #000000;
     --cor-fundo-caixa: rgba(255, 255, 255, 0.8);
     --borda-caixa-gradiente1: #604abc;
     --borda-caixa-gradiente2: #fe7fb4;
+    --rodape-gradiente1: #a760e4;
+    --rodape-gradiente2: #ca91b1;
 }
 
 /* retira estilo padrão css e ajusta parâmetros gerais*/
@@ -42,7 +44,7 @@ html {
 /* Estilização do cabeçalho */
 
 header {
-    background-color: var(--cor-fundo-cabecalho-rodape);
+    background-color: var(--cor-fundo-cabecalho);
     color: var(--cor-texto-branco);
     position:sticky;
     top: 0;
@@ -58,6 +60,16 @@ header {
 
 .menu > li {
     margin: 0px 16px;
+    padding:16px;
+    transition: transform 0.3s ease; 
+}
+
+/* Adiciona efeito quando passa o mouse em cima dos elementos do cabeçalho */
+.menu > li:hover {
+    cursor: pointer;
+    background-color: var(--rodape-gradiente1);
+    border-radius: 20px;
+    transform: scale(1.1); 
 }
 
 /* Estilização do corpo */
@@ -65,10 +77,10 @@ header {
 /* Âncora para direcionamento dos links do cabeçalho */
 
 .ancora{
-   display:block;
-   height: 90px;
-   margin-top:-90px;
-   visibility:hidden;
+    display:block;
+    height: 90px;
+    margin-top:-90px;
+    visibility:hidden;
 }
 
 /* Container das seções, utilizando flexbox. Orienta os containeres filhos verticalmente e os alinha */
@@ -137,7 +149,7 @@ header {
 /* Estilização do rodapé */
 
 footer {
-    background-color: var(--cor-fundo-cabecalho-rodape);
+    background-image: linear-gradient(to right, var(--rodape-gradiente1) 0%, var(--rodape-gradiente2) 100%);
     color: var(--cor-texto-branco);
 }
 
@@ -151,6 +163,12 @@ footer {
 .footer-links > li {
     margin: 0px 16px;
 }
-
-
-
+.footer-links > li img {
+    width: 64px;
+    height: auto;
+    transition: transform 0.3s ease; 
+}
+.footer-links > li img:hover {
+    cursor: pointer;
+    transform: scale(1.2); 
+}
