@@ -107,17 +107,17 @@
         
         <!-- Barra de scroll horizontal -->
         <div class="barra-scroll-horizontal">
-          <a class="slide-anterior" onclick="changeSlide(-1, 'carrossel')">
-            <div class="seta-slide-anterior">&#9664;</div>
-          </a>
+            <button class="slide-anterior" id="botaoAnterior">
+              <div class="seta-slide-anterior">&#9664;</div>
+            </button>
 
-          <div class="barra-track">
-            <div class="barra-thumb" id="scrollThumb"></div>
-          </div>
-
-          <a class="slide-seguinte" onclick="changeSlide(1, 'carrossel')">
-            <div class="seta-slide-seguinte">&#9654;</div>
-          </a>
+            <div class="barra-track">
+              <div class="barra-thumb" id="barraThumb"></div>
+            </div>
+            
+            <button class="slide-seguinte" id="botaoSeguinte">
+              <div class="seta-slide-seguinte">&#9654;</div>
+            </button>
         </div>
 
       </div>
