@@ -1,0 +1,156 @@
+/* variáveis de cor */
+
+:root {
+    --cor-fundo-cabecalho-rodape: #a188eb;
+    --cor-texto-branco: #ffffff;
+    --cor-texto-titulo: #414141;
+    --cor-texto-paragrafo: #000000;
+    --cor-fundo-caixa: rgba(255, 255, 255, 0.8);
+    --borda-caixa-gradiente1: #604abc;
+    --borda-caixa-gradiente2: #fe7fb4;
+}
+
+/* retira estilo padrão css e ajusta parâmetros gerais*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Pixelify Sans", sans-serif;
+    font-size: 20px;
+}
+
+h1 {
+    font-size: 40px;
+    margin-bottom: 30px;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* Estilização do cabeçalho */
+
+header {
+    background-color: var(--cor-fundo-cabecalho-rodape);
+    color: var(--cor-texto-branco);
+    position:sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 35px 16px;    
+}
+
+.menu > li {
+    margin: 0px 16px;
+}
+
+/* Estilização do corpo */
+
+/* Âncora para direcionamento dos links do cabeçalho */
+
+.ancora{
+   display:block;
+   height: 90px;
+   margin-top:-90px;
+   visibility:hidden;
+}
+
+/* Container das seções, utilizando flexbox. Orienta os containeres filhos verticalmente e os alinha */
+.container {
+    display: flex;
+    flex-direction: column;    
+    align-items: stretch;
+    justify-content: center;
+    padding: 20px 60px;
+    background: #e7b6ff;
+    background: linear-gradient(139deg, rgba(231, 182, 255, 0.8) 0%, rgba(241, 127, 254, 0.6) 65%, rgba(182, 215, 255, 0.6) 100%);
+}
+
+/* Container que contem cada elemento */
+.caixa {
+    border-style: solid;
+    border-width: 2px;
+    border-color: var(--cor-texto-paragrafo);
+    max-width: 800px;
+    min-width: 600px;    
+    margin: 40px auto;
+    font-size: 20px;
+    background: var(--cor-fundo-caixa);
+    
+}
+
+.caixa-texto {
+    border-width: 2px;
+    padding: 5px;
+}
+
+.caixa-texto p {
+    margin: 15px 0;   
+}
+
+.caixa-texto a {
+    color:var(--borda-caixa-gradiente1);
+}
+
+/* Estilização da seção nossos objetivos, que contém bullet points roxos */
+
+.caixa-texto ul {
+    margin-left: 20px;
+}
+
+.caixa-texto li {
+    list-style:disc;
+    color: var(--borda-caixa-gradiente1);
+    padding-left: 15px;
+    margin: 15px 0;
+}
+
+.caixa-texto li span {
+    color: var(--cor-texto-paragrafo);
+}
+
+/* implementação da borda gradiente */
+
+.borda-gradiente {
+    border: 10px solid transparent;
+    border-image: linear-gradient(to right, var(--borda-caixa-gradiente1), var(--borda-caixa-gradiente2)) 1;
+    border-image-slice: 1;
+    padding: 30px;
+}
+
+/* Estilização do rodapé */
+
+footer {
+    background-color: var(--cor-fundo-cabecalho-rodape);
+    color: var(--cor-texto-branco);
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 40px 16px;    
+}
+
+.footer-links > li {
+    margin: 0px 16px;
+}
+
+
+

@@ -5,17 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Lista de Tarefas</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
 </head>
 
 <header>
     <nav>
         <ul class="menu">
-            <li><a href="">Quem somos nós?</a></li>
-            <li><a href="">Nossos objetivos:</a></li>
-            <li><a href="">Projetos</a></li>
-            <li><a href="">Meninas Digitais</a></li>
-            <li><a href="">Integrantes</a></li>
-            <li><a href="">Contate-nos</a></li>
+            <li><a href="#quem-somos-nos">Quem somos nós?</a></li>
+            <li><a href="#nossos-objetivos">Nossos objetivos</a></li>
+            <li><a href="#projetos">Projetos</a></li>
+            <li><a href="#meninas-digitais">Meninas Digitais</a></li>
+            <li><a href="#integrantes">Integrantes</a></li>
+            <li><a href="#contate-nos">Contate-nos</a></li>
         </ul>
     </nav>
 </header>
@@ -29,32 +32,46 @@
 
     <!-- Caixotes de texto -->
   <div class="container">
+
+    
+    <span class="ancora" id="quem-somos-nos"></span>
     <div class="caixa caixa-texto">
+      <div class="borda-gradiente">
         <h1>Quem somos nós?</h1>
         <p class="txt_info" >O Program.Ada nasceu no Instituto de Informática em 2017,
         quando um grupo de alunas se uniu para enfrentar situações de
         assédio vividas na universidade. Dessa iniciativa, surgiram a
         Comissão de Relacionamentos do INF e o Coletivo de Mulheres na
         Computação.</p>
+        <p class="txt_info" >No começo, o coletivo ainda não possuía um nome. Com o tempo, percebemos a importância de celebrar a trajetória de Ada Lovelace, considerada a primeira programadora da história, e assim surgiu o Program.Ada.</p>
+        <p class="txt_info" >Desde então, realizamos rodas de conversa, cine-debates, oficinas e eventos que fortalecem o protagonismo das mulheres na tecnologia e promovem reflexões sobre gênero e inclusão na comunidade acadêmica e além dela.</p>
+        <p class="txt_info" >Em 2023, o coletivo deu um passo marcante ao se tornar também um projeto de extensão universitária, ampliando seu alcance e o impacto de suas ações na sociedade.</p>
+      </div>
     </div>
+
+    <span class="ancora" id="nossos-objetivos"></span>
     <div class="caixa caixa-texto">
+      <div class="borda-gradiente">
         <h1>Nossos objetivos:</h1>
         <ul>
-            <li>Construir um espaço seguro e acolhedor, onde mulheres possam compartilhar experiências, trocar ideias e dialogar sobre temas em comum. </li>
-            <li>Apoiar a inserção de mulheres no mercado de tecnologia, oferecendo desde oportunidades de networking até suporte na elaboração de currículos e trajetórias profissionais.</li>
-            <li>Promover atividades e eventos para a comunidade, ampliando as discussões sobre a presença das mulheres na tecnologia e sua atuação no mercado de trabalho.</li>
-            <li>Transformar o INF em um ambiente mais inclusivo e amigável para mulheres, incentivando o respeito, a diversidade e a equidade de gênero.</li>
+            <li><span>Construir um espaço seguro e acolhedor, onde mulheres possam compartilhar experiências, trocar ideias e dialogar sobre temas em comum.</span> </li>
+            <li><span>Apoiar a inserção de mulheres no mercado de tecnologia, oferecendo desde oportunidades de networking até suporte na elaboração de currículos e trajetórias profissionais.</span></li>
+            <li><span>Promover atividades e eventos para a comunidade, ampliando as discussões sobre a presença das mulheres na tecnologia e sua atuação no mercado de trabalho.</span></li>
+            <li><span>Transformar o INF em um ambiente mais inclusivo e amigável para mulheres, incentivando o respeito, a diversidade e a equidade de gênero.</span></li>
         </ul>
+      </div>
     </div>
     
 
     <!-- Carrossel -->
+    <span class="ancora" id="projetos"></span>
     <div class="caixa" i>="carrossel"
         <!-- aqui entra o slider/carrossel -->
     </div>
     
-    
+    <span class="ancora" id="meninas-digitais"></span>
     <div class="caixa caixa-texto">
+      <div class="borda-gradiente">
       <h1>Meninas Digitais</h1>
         <p class="txt_info">
           A partir de 2024, o Program.Ada passou a integrar o Programa Meninas Digitais, uma iniciativa da Sociedade Brasileira de Computação (SBC), voltada à valorização e incentivo da participação feminina na área de Tecnologia da Informação (TI).
@@ -72,13 +89,17 @@
           Para maiores informações do programa, acesse o Link: 
         <a href="https://meninas.sbc.org.br/" target="_blank">https://meninas.sbc.org.br/</a>
         </p>
+        </div>
     </div>
       
+
+    <span class="ancora" id="integrantes"></span>
     <!-- Carrossel -->  
-    <div class="integrantes">
+    <div class="caixa integrantes" i>="integrantes"
       <!-- aqui entra o slider/carrossel -->
     </div>
 
+    <span class="ancora" id="contate-nos"></span>
     <div class="caixa formulario">
       <form>
         <label for="formulario_nome_input" ></label>
