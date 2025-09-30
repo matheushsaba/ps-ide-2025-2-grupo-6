@@ -82,6 +82,14 @@ header {
     border-radius: 20px;
     transform: scale(1.1); 
 }
+/* width 110% pois, quando o mouse fica em cima do menu, o elemento ficar maior, entao o alcance da ancora tem que aumentar */
+.menu > li a {
+    display: block;
+    width: 110%;
+    height: auto;
+    padding: 6px 12px;
+    
+  }
 
 /* responsividade do header */
 #menu-botao-abrir {
@@ -116,11 +124,10 @@ header {
 .menu > li {
     left: 0;
     margin: 8px 0;
-    padding: 16px 24px;
-    border: 1px solid rgba(188, 186, 186, 0.1);
+    border: 1px solid rgba(188, 186, 186, 0.2);
     border-radius: 10px;
     color: var(--cor-fonte-cabecalho-responsivo);
-  }
+}
   .menu > li:hover {
     cursor: pointer;
     background-color: rgba(188, 186, 186, 0.1);
