@@ -41,7 +41,12 @@ ul {
 html {
     scroll-behavior: smooth;
 }
-
+/* Estilização da imagem home */
+#imag_home{
+    width: 100%;
+    height: auto;
+    display: flex;
+}
 
 /* Estilização do cabeçalho */
 
