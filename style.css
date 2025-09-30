@@ -2,7 +2,7 @@
 
 :root {
     --cor-fundo-cabecalho: #a188eb;
-    --cor-fundo-cabecalho-responsivo: #ffffff;
+    --cor-fundo-cabecalho-responsivo: rgba(255, 255, 255, 0.97);
     --cor-fonte-cabecalho-responsivo: #604abc;
     --cor-texto-branco: #ffffff;
     --cor-texto-titulo: #414141;
@@ -47,10 +47,14 @@ html {
 
 header {
     background-color: var(--cor-fundo-cabecalho);
+    height: 96px;
     color: var(--cor-texto-branco);
     position:sticky;
     top: 0;
     z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    display: flex;
 }
 
 .menu {
@@ -81,15 +85,13 @@ header {
     border: none;
     color: white;
     cursor: pointer;
-    margin: 16px;
-    margin:10px;
 }
 
 #menu-botao-abrir>div {
-    height: 8px;
-    width: 48px;
+    height: 6px;
+    width: 54px;
     background-color: var(--cor-texto-branco);
-    margin: 4px 0;
+    margin: 10px 0;
     border-radius: 2px;
 }
 /* 1280px é quando o texto começa a quebrar, portanto, trocar para uma lista vertical */
@@ -101,21 +103,24 @@ header {
     flex-direction: column;   
     background-color: var(--cor-fundo-cabecalho-responsivo);
     position: absolute;
-    top: 70px;   
+    top: 100%;   
     left: 0;
+    width: 100%;
     padding: 10px 0;
-  }
-  .menu > li {
+}
+.menu > li {
     left: 0;
     margin: 8px 0;
-    padding: 10px 20px;
+    padding: 16px 24px;
+    border: 1px solid rgba(188, 186, 186, 0.1);
+    border-radius: 10px;
     color: var(--cor-fonte-cabecalho-responsivo);
   }
   .menu > li:hover {
     cursor: pointer;
-    background-color: #b1b1b1;
+    background-color: rgba(188, 186, 186, 0.1);
     border-radius: 20px;
-    transform: scale(1.1); 
+    transform: scale(1.01); 
 }
 
  .menu_botao_abrir_ativo {
@@ -124,6 +129,7 @@ header {
 
   #menu-botao-abrir {
     display: block;
+    margin:0px;
   }
 }
 
