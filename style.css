@@ -137,6 +137,92 @@ header {
     color: var(--cor-texto-paragrafo);
 }
 
+/* Estilização do carrossel */
+
+.header-carrossel {
+  display: flex;
+  align-items: center;
+  margin: 12px 12px;
+  height: 46px;
+  background-image: linear-gradient(to right, var(--rodape-gradiente1) 0%, var(--rodape-gradiente2) 100%);
+  border: 1px solid #000;
+}
+
+.texto-header-carrossel {
+  background: #fff;
+  border: 2px solid #000;
+  border-radius: 0 16px 16px 0 / 0 50% 50% 0;
+  padding: 0px 32px 0px 12px;
+  margin: 2px;
+  line-height: 1;
+  display: inline-block;
+}
+
+.header-carrossel .texto-header-carrossel span {
+  font-family: "Micro 5", sans-serif;
+  font-weight: 400;
+  font-size: 36px;
+
+  /*-webkit-text-stroke só funciona no Chrome/Edge/Safari, 
+  então simulamos o stroke com text-shadow*/
+  color: #414141; /* cor do preenchimento */
+  text-shadow: 
+    -1px -1px 0 #000,
+     1px -1px 0 #000,
+    -1px  1px 0 #000,
+     1px  1px 0 #000;
+}
+
+.slide .caixa-texto {
+  padding: 0px 14px;
+  margin: 12px;
+  border-width: 1px;
+}
+
+.titulo-slide {
+  font-family: "Micro 5", sans-serif;
+  font-weight: 400;
+  font-size: 36px;
+
+  /*-webkit-text-stroke só funciona no Chrome/Edge/Safari, 
+  então simulamos o stroke com text-shadow*/
+  color: #000; /* cor do preenchimento */
+  text-shadow: 
+    -1px -1px 0 #000,
+     1px -1px 0 #000,
+    -1px  1px 0 #000,
+     1px  1px 0 #000;
+}
+
+.slide .caixa-texto .texto-slide {
+  font-size: 30px;
+}
+
+.barra-scroll-horizontal{
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 6px;
+  height: var(--scroll-h);
+  margin: 8px 0;
+  user-select: none;
+  border-width: 1px;
+}
+
+.barra-scroll-horizontal .slide-anterior,
+.barra-scroll-horizontal .slide-seguinte{
+  position: relative;
+  height: 100%;
+  min-width: 34px;
+  padding: 0;
+  background: var(--fundo-btn);
+  border: 1px solid var(--borda);
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+}
+
+
 /* implementação da borda gradiente */
 
 .borda-gradiente {
