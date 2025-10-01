@@ -142,17 +142,41 @@ header {
   position: relative;
 }
 
+.slide-com-foto{
+  --foto-w: 260px;
+  --foto-h: 210px;
+  --pad-x: 3px;
+  --pad-y: 10px;
+  --borda: 1px;
+  --top-off: -32px;
+  --right-off: -10px;
+}
+
 .slide-com-foto .imagem-slide {
   position: absolute;
-  top: -32px;
-  right: -10px;
+  top: var(--top-off);
+  right: var(--right-off);
   z-index: 5;
-  width: 260px;
-  height: 210px;
+  width: var(--foto-w);
+  height: var(--foto-h);
   object-fit: cover;
   background: #fff;
-  border: 1px solid #000;
-  padding: 10px 3px;
+  border: var(--borda) solid #000;
+  padding: var(--pad-y) var(--pad-x);
+}
+
+/* Elemento invisível que faz com que o texto contorne a imagem */
+.slide-com-foto .caixa-texto .flow-shape{
+  float: right;
+  /* área total da moldura: conteúdo + padding + borda */
+  width: calc(var(--foto-w) + 2*var(--pad-x) + 2*var(--borda));
+  height: calc(var(--foto-h) + 2*var(--pad-y) + 2*var(--borda));
+
+  margin-top: var(--top-off);
+  margin-right: var(--right-off);
+  content: "";
+  display: block;
+  opacity: 0;
 }
 
 .header-carrossel {
