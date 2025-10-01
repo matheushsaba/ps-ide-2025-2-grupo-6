@@ -150,6 +150,7 @@ header {
   --borda: 1px;
   --top-off: -32px;
   --right-off: -10px;
+  --drop-shadow: -4px 4px 4px 0px #EC20D240;
 }
 
 .slide-com-foto .imagem-slide {
@@ -163,6 +164,7 @@ header {
   background: #fff;
   border: var(--borda) solid #000;
   padding: var(--pad-y) var(--pad-x);
+  box-shadow: var(--drop-shadow);
 }
 
 /* Elemento invisível que faz com que o texto contorne a imagem */
