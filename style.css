@@ -337,9 +337,10 @@ header {
   place-items: center;
 }
 
-.barra-scroll-horizontal .slide-anterior .seta-slide-anterior,
-.barra-scroll-horizontal .slide-seguinte .seta-slide-seguinte{
-    font-size: 12px;
+.icone-seta{
+  height: 19px;
+  width: 52px;
+  padding: 2px 4px;
 }
 
 .barra-track{
