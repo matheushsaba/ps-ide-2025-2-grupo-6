@@ -4,9 +4,16 @@ function inicializarCarrossel() {
     const prevButton = carousel.querySelector('#botaoAnterior');
     const nextButton = carousel.querySelector('#botaoSeguinte');
     const scrollThumb = carousel.querySelector('#barraThumb');
+    const scrollTrack = carousel.querySelector('.barra-track');
+    const scrollFill  = carousel.querySelector('.barra-fill');
 
     let currentSlideIndex = 0;
     const totalSlides = slides.length;
+    const stepPercent = totalSlides > 0 ? (100 / totalSlides) : 100;
+
+    if (scrollThumb) {
+        scrollThumb.style.width = stepPercent + '%';
+    }
 
     function showSlide(index) {
         if (index >= totalSlides) {
@@ -32,7 +39,8 @@ function inicializarCarrossel() {
     }
 
     function updateScrollThumb() {
-        // TODO: implementar a animação da barra de rolagem
+        const leftPercent = stepPercent * currentSlideIndex;
+        scrollThumb.style.left = leftPercent + '%';
     }
 
     nextButton.addEventListener('click', () => {
@@ -43,7 +51,7 @@ function inicializarCarrossel() {
         showSlide(currentSlideIndex - 1);
     });
 
-    showSlide(currentSlideIndex); // Mostra o carrossel inicial quando a página carrega
+    showSlide(currentSlideIndex);
 }
 
 export { inicializarCarrossel };

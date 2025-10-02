@@ -12,6 +12,8 @@
     --borda-caixa-gradiente2: #fe7fb4;
     --rodape-gradiente1: #a760e4;
     --rodape-gradiente2: #ca91b1;
+    --trilho-scroll-gradiente1: #fe7fb4;
+    --trilho-scroll-gradiente2: #b968b7;
 }
 
 /* retira estilo padrão css e ajusta parâmetros gerais*/
@@ -259,7 +261,7 @@ header {
   align-items: center;
   margin: 12px 12px;
   height: 46px;
-  background-image: linear-gradient(to right, var(--rodape-gradiente1) 0%, var(--rodape-gradiente2) 100%);
+  background-image: linear-gradient(to right, var(--borda-caixa-gradiente1) 0%, var(--borda-caixa-gradiente2) 100%);
   border: 1px solid #000;
 }
 
@@ -290,7 +292,7 @@ header {
 
 .slide .caixa-texto {
   padding: 0px 14px;
-  margin: 12px;
+  margin: 12px 12px 0px 12px;
   border-width: 1px;
 }
 
@@ -317,26 +319,35 @@ header {
   display: grid;
   grid-template-columns: auto 1fr auto;
   align-items: center;
-  gap: 6px;
-  height: var(--scroll-h);
-  margin: 8px 0;
-  user-select: none;
-  border-width: 1px;
+  height: 22px;
+  margin: 0px 12px 20px 12px;
 }
 
 .barra-scroll-horizontal .slide-anterior,
 .barra-scroll-horizontal .slide-seguinte{
-  position: relative;
-  height: 100%;
-  min-width: 34px;
-  padding: 0;
-  background: var(--fundo-btn);
-  border: 1px solid var(--borda);
+  min-width: 64px;
+  background: #fff;
+  border: 1px solid var(--borda, #000);
   cursor: pointer;
   display: grid;
   place-items: center;
 }
 
+.barra-track{
+  position: relative;
+  height: 22px;
+  border: 1px solid var(--borda, #000);
+  background: #fff;
+  overflow: hidden;
+}
+
+.barra-thumb{
+  position: absolute;
+  height: 100%;
+  background-image: linear-gradient(to right, var(--trilho-scroll-gradiente1) 0%, var(--trilho-scroll-gradiente2) 100%);
+  border: 1px solid var(--borda, #000);
+  transition: left 180ms ease;
+}
 
 /* implementação da borda gradiente */
 
