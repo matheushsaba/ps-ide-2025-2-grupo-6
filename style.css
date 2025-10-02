@@ -312,7 +312,10 @@ header {
 }
 
 .slide .caixa-texto .texto-slide {
+  font-family: "VT323", sans-serif;
+  font-weight: 400;
   font-size: 30px;
+  min-height: 260px;
 }
 
 .barra-scroll-horizontal{
@@ -320,11 +323,12 @@ header {
   grid-template-columns: auto 1fr auto;
   align-items: center;
   height: 22px;
-  margin: 0px 12px 20px 12px;
+  margin: -1px 12px 20px 12px;
 }
 
 .barra-scroll-horizontal .slide-anterior,
 .barra-scroll-horizontal .slide-seguinte{
+  height: 100%;
   min-width: 64px;
   background: #fff;
   border: 1px solid var(--borda, #000);
@@ -333,19 +337,26 @@ header {
   place-items: center;
 }
 
+.barra-scroll-horizontal .slide-anterior .seta-slide-anterior,
+.barra-scroll-horizontal .slide-seguinte .seta-slide-seguinte{
+    font-size: 12px;
+}
+
 .barra-track{
   position: relative;
   height: 22px;
   border: 1px solid var(--borda, #000);
+  margin: 0px -1px;
   background: #fff;
   overflow: hidden;
 }
 
 .barra-thumb{
   position: absolute;
-  height: 100%;
+  height: 22px;
   background-image: linear-gradient(to right, var(--trilho-scroll-gradiente1) 0%, var(--trilho-scroll-gradiente2) 100%);
   border: 1px solid var(--borda, #000);
+  margin: -1px -1px;
   transition: left 180ms ease;
 }
 
