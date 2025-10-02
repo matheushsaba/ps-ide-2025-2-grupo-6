@@ -1,5 +1,6 @@
 import { eventoFormulario } from "./form.js";
 import { inicializarCarrossel } from "./carrossel.js";
+import { abrirMenuResponsivo, fecharMenuResponsivoAoClicar } from "./style.js";
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -10,4 +11,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- CARROSSEL ---
     inicializarCarrossel();
+
+    // --- MENU RESPONSIVO ---
+    const botaoAbrirMenu = document.querySelector("#menu-botao-abrir");
+    botaoAbrirMenu.addEventListener("click", abrirMenuResponsivo);
+    fecharMenuResponsivoAoClicar();
 });

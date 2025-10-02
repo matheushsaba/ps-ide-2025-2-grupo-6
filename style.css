@@ -2,6 +2,8 @@
 
 :root {
     --cor-fundo-cabecalho: #a188eb;
+    --cor-fundo-cabecalho-responsivo: rgba(255, 255, 255, 0.97);
+    --cor-fonte-cabecalho-responsivo: #604abc;
     --cor-texto-branco: #ffffff;
     --cor-texto-titulo: #414141;
     --cor-texto-paragrafo: #000000;
@@ -39,16 +41,25 @@ ul {
 html {
     scroll-behavior: smooth;
 }
-
+/* Estilização da imagem home */
+#imag_home{
+    width: 100%;
+    height: auto;
+    display: flex;
+}
 
 /* Estilização do cabeçalho */
 
 header {
     background-color: var(--cor-fundo-cabecalho);
+    height: 96px;
     color: var(--cor-texto-branco);
     position:sticky;
     top: 0;
     z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    display: flex;
 }
 
 .menu {
@@ -70,6 +81,68 @@ header {
     background-color: var(--rodape-gradiente1);
     border-radius: 20px;
     transform: scale(1.1); 
+}
+/* width 110% pois, quando o mouse fica em cima do menu, o elemento ficar maior, entao o alcance da ancora tem que aumentar */
+.menu > li a {
+    display: block;
+    width: 110%;
+    height: auto;
+    padding: 6px 12px;
+    
+  }
+
+/* responsividade do header */
+#menu-botao-abrir {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+#menu-botao-abrir>div {
+    height: 6px;
+    width: 54px;
+    background-color: var(--cor-texto-branco);
+    margin: 10px 0;
+    border-radius: 2px;
+}
+/* 1280px é quando o texto começa a quebrar, portanto, trocar para uma lista vertical */
+@media (max-width: 1280px) {
+    /* configurando o menu para ficar vertical e no estilo responsivo (reduzido) */
+  .menu {
+    display: none;            
+    /* mudar a direção (agora vai ser uma lista vertical) */
+    flex-direction: column;   
+    background-color: var(--cor-fundo-cabecalho-responsivo);
+    position: absolute;
+    top: 100%;   
+    left: 0;
+    width: 100%;
+    padding: 10px 0;
+}
+.menu > li {
+    left: 0;
+    margin: 8px 0;
+    border: 1px solid rgba(188, 186, 186, 0.2);
+    border-radius: 10px;
+    color: var(--cor-fonte-cabecalho-responsivo);
+}
+  .menu > li:hover {
+    cursor: pointer;
+    background-color: rgba(188, 186, 186, 0.1);
+    border-radius: 20px;
+    transform: scale(1.01); 
+}
+
+ .menu_botao_abrir_ativo {
+    display: flex; 
+  }
+
+  #menu-botao-abrir {
+    display: block;
+    margin:0px;
+  }
 }
 
 /* Estilização do corpo */
