@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Micro+5&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 </head>
 
 <header>
@@ -181,9 +182,18 @@
     </div>
       
 
-    <span class="ancora" id="integrantes"></span>
-    <div class="caixa integrantes" i>="integrantes"
-      <!-- aqui entra o slider/carrossel -->
+    <span class="ancora" id="ancora-integrantes"></span>
+    <!-- Carrossel -->  
+    <div class="caixa" id="integrantes">
+      <!-- Cabeçalho -->
+      <div class="cabecalho-carrossel">
+        <span>Integrantes</span>
+      </div>
+      <!-- aqui entra a janela com o scroll e a grid de integrantes -->
+      <div class="janela">
+        <!-- integrantes.js captura os elementos que vão ser usados na grid -->
+        <div class="container_integrantes" id="grid"></div>
+      </div>
     </div>
 
     <span class="ancora" id="contate-nos"></span>
