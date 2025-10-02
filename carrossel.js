@@ -4,8 +4,6 @@ function inicializarCarrossel() {
     const prevButton = carousel.querySelector('#botaoAnterior');
     const nextButton = carousel.querySelector('#botaoSeguinte');
     const scrollThumb = carousel.querySelector('#barraThumb');
-    const scrollTrack = carousel.querySelector('.barra-track');
-    const scrollFill  = carousel.querySelector('.barra-fill');
 
     let currentSlideIndex = 0;
     const totalSlides = slides.length;
