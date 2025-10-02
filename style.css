@@ -137,6 +137,134 @@ header {
     color: var(--cor-texto-paragrafo);
 }
 
+/* Estilização do carrossel */
+.carrossel {
+  position: relative;
+}
+
+.slide-com-foto{
+  --foto-w: 260px;
+  --foto-h: 210px;
+  --pad-x: 3px;
+  --pad-y: 10px;
+  --borda: 1px;
+  --top-off: -32px;
+  --right-off: -10px;
+  --drop-shadow: -4px 4px 4px 0px #EC20D240;
+}
+
+.slide-com-foto .imagem-slide {
+  position: absolute;
+  top: var(--top-off);
+  right: var(--right-off);
+  z-index: 5;
+  width: var(--foto-w);
+  height: var(--foto-h);
+  object-fit: cover;
+  background: #fff;
+  border: var(--borda) solid #000;
+  padding: var(--pad-y) var(--pad-x);
+  box-shadow: var(--drop-shadow);
+}
+
+/* Elemento invisível que faz com que o texto contorne a imagem */
+.slide-com-foto .caixa-texto .flow-shape{
+  float: right;
+  /* área total da moldura: conteúdo + padding + borda */
+  width: calc(var(--foto-w) + 2*var(--pad-x) + 2*var(--borda));
+  height: calc(var(--foto-h) + 2*var(--pad-y) + 2*var(--borda));
+
+  margin-top: var(--top-off);
+  margin-right: var(--right-off);
+  content: "";
+  display: block;
+  opacity: 0;
+}
+
+.header-carrossel {
+  display: flex;
+  align-items: center;
+  margin: 12px 12px;
+  height: 46px;
+  background-image: linear-gradient(to right, var(--rodape-gradiente1) 0%, var(--rodape-gradiente2) 100%);
+  border: 1px solid #000;
+}
+
+.texto-header-carrossel {
+  background: #fff;
+  border: 2px solid #000;
+  border-radius: 0 16px 16px 0 / 0 50% 50% 0;
+  padding: 0px 32px 0px 12px;
+  margin: 2px;
+  line-height: 1;
+  display: inline-block;
+}
+
+.header-carrossel .texto-header-carrossel span {
+  font-family: "Micro 5", sans-serif;
+  font-weight: 400;
+  font-size: 36px;
+
+  /*-webkit-text-stroke só funciona no Chrome/Edge/Safari, 
+  então simulamos o stroke com text-shadow*/
+  color: #414141; /* cor do preenchimento */
+  text-shadow: 
+    -1px -1px 0 #000,
+     1px -1px 0 #000,
+    -1px  1px 0 #000,
+     1px  1px 0 #000;
+}
+
+.slide .caixa-texto {
+  padding: 0px 14px;
+  margin: 12px;
+  border-width: 1px;
+}
+
+.titulo-slide {
+  font-family: "Micro 5", sans-serif;
+  font-weight: 400;
+  font-size: 36px;
+
+  /*-webkit-text-stroke só funciona no Chrome/Edge/Safari, 
+  então simulamos o stroke com text-shadow*/
+  color: #000; /* cor do preenchimento */
+  text-shadow: 
+    -1px -1px 0 #000,
+     1px -1px 0 #000,
+    -1px  1px 0 #000,
+     1px  1px 0 #000;
+}
+
+.slide .caixa-texto .texto-slide {
+  font-size: 30px;
+}
+
+.barra-scroll-horizontal{
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 6px;
+  height: var(--scroll-h);
+  margin: 8px 0;
+  user-select: none;
+  border-width: 1px;
+}
+
+.barra-scroll-horizontal .slide-anterior,
+.barra-scroll-horizontal .slide-seguinte{
+  position: relative;
+  height: 100%;
+  min-width: 34px;
+  padding: 0;
+  background: var(--fundo-btn);
+  border: 1px solid var(--borda);
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+}
+
+
 /* implementação da borda gradiente */
 
 .borda-gradiente {
