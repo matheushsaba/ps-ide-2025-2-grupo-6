@@ -1,6 +1,10 @@
 /* variáveis de cor */
 
 :root {
+    --tamanho-1rem-desktop: 20px;
+    --tamanho-1rem-desktop-menor: 15px;
+    --tamanho-1rem-mobile: 14px;
+
     --cor-fundo-cabecalho: #a188eb;
     --cor-fundo-cabecalho-responsivo: rgba(255, 255, 255, 0.97);
     --cor-fonte-cabecalho-responsivo: #604abc;
@@ -23,12 +27,12 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Pixelify Sans", sans-serif;
-    font-size: 20px;
+    font-size: var(--tamanho-1rem-desktop);
 }
 
 h1 {
-    font-size: 40px;
-    margin-bottom: 30px;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
 }
 
 a {
@@ -56,7 +60,7 @@ header {
     background-color: var(--cor-fundo-cabecalho);
     height: 96px;
     color: var(--cor-texto-branco);
-    position:sticky;
+    position: sticky;
     top: 0;
     z-index: 1000;
     justify-content: center;
@@ -64,16 +68,18 @@ header {
     display: flex;
 }
 
+
+
 .menu {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    padding: 35px 16px;    
+    padding: 1.75rem 0.8rem;    
 }
 
 .menu > li {
-    margin: 0px 16px;
-    padding:16px;
+    margin: 0rem 0.8rem;
+    padding:0.8rem;
     transition: transform 0.3s ease; 
 }
 
@@ -81,7 +87,7 @@ header {
 .menu > li:hover {
     cursor: pointer;
     background-color: var(--rodape-gradiente1);
-    border-radius: 20px;
+    border-radius: 1rem;
     transform: scale(1.1); 
 }
 /* width 110% pois, quando o mouse fica em cima do menu, o elemento ficar maior, entao o alcance da ancora tem que aumentar */
@@ -89,7 +95,7 @@ header {
     display: block;
     width: 110%;
     height: auto;
-    padding: 6px 12px;
+    padding: 0.3rem 0.6rem;
     
   }
 
@@ -109,10 +115,28 @@ header {
     margin: 10px 0;
     border-radius: 2px;
 }
+
+@media (max-width: 1450px) {
+    * {
+        font-size: var(--tamanho-1rem-desktop-menor);
+    }
+
+
+}
+
 /* 1280px é quando o texto começa a quebrar, portanto, trocar para uma lista vertical */
-@media (max-width: 1280px) {
+@media (max-width: 1000px) {
     /* configurando o menu para ficar vertical e no estilo responsivo (reduzido) */
-  .menu {
+    * {
+        font-size: var(--tamanho-1rem-mobile);
+    }
+
+    header {
+        height: 15vh;
+    }
+ 
+  
+    .menu {
     display: none;            
     /* mudar a direção (agora vai ser uma lista vertical) */
     flex-direction: column;   
@@ -122,7 +146,8 @@ header {
     left: 0;
     width: 100%;
     padding: 10px 0;
-}
+    }
+
 .menu > li {
     left: 0;
     margin: 8px 0;
@@ -145,6 +170,7 @@ header {
     display: block;
     margin:0px;
   }
+
 }
 
 /* Estilização do corpo */
@@ -164,10 +190,12 @@ header {
     flex-direction: column;    
     align-items: stretch;
     justify-content: center;
-    padding: 20px 60px;
+    padding: 1rem 3rem;
     background: #e7b6ff;
     background: linear-gradient(139deg, rgba(231, 182, 255, 0.8) 0%, rgba(241, 127, 254, 0.6) 65%, rgba(182, 215, 255, 0.6) 100%);
 }
+
+
 
 /* Container que contem cada elemento */
 .caixa {
@@ -176,19 +204,24 @@ header {
     border-color: var(--cor-texto-paragrafo);
     max-width: 800px;
     min-width: 600px;    
-    margin: 40px auto;
-    font-size: 20px;
+    margin: 2rem auto;
+    font-size: 1rem;
     background: var(--cor-fundo-caixa);
+    border-width: 2px;
+    padding: 5px;
     
 }
 
-.caixa-texto {
-    border-width: 2px;
-    padding: 5px;
+@media (max-width: 1000px) {
+    .caixa {
+        max-width: 85vw;
+        min-width: 100px;
+    }
 }
 
+
 .caixa-texto p {
-    margin: 15px 0;   
+    margin: 0.75rem 0;   
 }
 
 .caixa-texto a {
@@ -198,14 +231,14 @@ header {
 /* Estilização da seção nossos objetivos, que contém bullet points roxos */
 
 .caixa-texto ul {
-    margin-left: 20px;
+    margin-left: 1rem;
 }
 
 .caixa-texto li {
     list-style:disc;
     color: var(--borda-caixa-gradiente1);
-    padding-left: 15px;
-    margin: 15px 0;
+    padding-left: 0.75rem;
+    margin: 0.75rem 0;
 }
 
 .caixa-texto li span {
@@ -213,9 +246,29 @@ header {
 }
 
 /* Estilização do carrossel */
+#carrossel {
+    min-width: 800px;
+}
+
+@media (max-width: 1000px) {
+    
+}
+
 .carrossel {
   position: relative;
+  padding: 0.6rem;
+  padding-right: 12px;
+  display: flex;
+  flex-direction: column;
+  /* min-width: 800px; */
+    /* justify-content: flex-start; */
 }
+
+/* .container-slides {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+} */
 
 .slide-com-foto{
   --foto-w: 260px;
@@ -226,6 +279,13 @@ header {
   --top-off: -32px;
   --right-off: -10px;
   --drop-shadow: -4px 4px 4px 0px #EC20D240;
+
+  padding: 0;
+
+}
+
+.slide .caixa {
+    margin: 0;
 }
 
 .slide-com-foto .imagem-slide {
@@ -242,24 +302,29 @@ header {
   box-shadow: var(--drop-shadow);
 }
 
+
+
 /* Elemento invisível que faz com que o texto contorne a imagem */
 .slide-com-foto .caixa-texto .flow-shape{
   float: right;
   /* área total da moldura: conteúdo + padding + borda */
   width: calc(var(--foto-w) + 2*var(--pad-x) + 2*var(--borda));
-  height: calc(var(--foto-h) + 2*var(--pad-y) + 2*var(--borda));
+  /* height: calc(var(--foto-h) + 2*var(--pad-y) + 2*var(--borda)); */
+  height: 10rem;
 
-  margin-top: var(--top-off);
-  margin-right: var(--right-off);
+  /* margin-top: var(--top-off); */
+  /* margin-right: var(--right-off); */
   content: "";
   display: block;
   opacity: 0;
 }
 
+
 .header-carrossel, .header-formulario {
   display: flex;
   align-items: center;
-  margin: 12px 12px;
+  margin: 0;
+  /* margin-bottom: 12px; */
   height: 46px;
   background-image: linear-gradient(to right, var(--borda-caixa-gradiente1) 0%, var(--borda-caixa-gradiente2) 100%);
   border: 1px solid #000;
@@ -278,7 +343,7 @@ header {
 .header-carrossel .texto-header-carrossel span, .header-formulario .texto-header-formulario span {
   font-family: "Micro 5", sans-serif;
   font-weight: 400;
-  font-size: 36px;
+  font-size: 1.8rem;
 
   /*-webkit-text-stroke só funciona no Chrome/Edge/Safari, 
   então simulamos o stroke com text-shadow*/
@@ -291,15 +356,15 @@ header {
 }
 
 .slide .caixa-texto {
-  padding: 0px 14px;
-  margin: 12px 12px 0px 12px;
+  padding: 1.2rem;
+  /* margin: 12px 12px 0px 12px; */
   border-width: 1px;
 }
 
 .titulo-slide {
   font-family: "Micro 5", sans-serif;
   font-weight: 400;
-  font-size: 36px;
+  font-size: 1.8rem;
 
   /*-webkit-text-stroke só funciona no Chrome/Edge/Safari, 
   então simulamos o stroke com text-shadow*/
@@ -312,10 +377,11 @@ header {
 }
 
 .slide .caixa-texto .texto-slide {
-  font-family: "VT323", sans-serif;
+  /* font-family: "VT323", sans-serif; */
   font-weight: 400;
-  font-size: 30px;
-  min-height: 260px;
+  font-size: 1rem;
+  min-height: 8rem;
+  /* max-width: 800px; */
 }
 
 .barra-scroll-horizontal{
@@ -323,7 +389,7 @@ header {
   grid-template-columns: auto 1fr auto;
   align-items: center;
   height: 22px;
-  margin: -1px 12px 20px 12px;
+  /* margin: -1px 12px 20px 12px; */
 }
 
 .barra-scroll-horizontal .slide-anterior,
@@ -357,9 +423,90 @@ header {
   height: 22px;
   background-image: linear-gradient(to right, var(--trilho-scroll-gradiente1) 0%, var(--trilho-scroll-gradiente2) 100%);
   border: 1px solid var(--borda, #000);
-  margin: -1px -1px;
+  margin: -1px -0;
   transition: left 180ms ease;
 }
+
+
+@media (max-width: 1000px) {
+
+    #carrossel {
+        max-width: 85vw;
+        min-width: 100px;
+    }
+
+    .carrossel {
+        min-height: 27rem;
+    }
+
+    .slide-sem-foto{
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        /* align-items: f; */
+    }
+
+    .slide-com-foto {
+        display: flex;
+        flex-grow: 1;
+    }
+
+    .slide .caixa-texto {
+        flex-grow: 1;
+    }
+
+
+    .slide-com-foto .imagem-slide {
+        display: none;
+        top: 0;
+        right: 0;
+        z-index: 5;
+        width: 0;
+        height: 0;
+        object-fit: cover;
+        background: #fff;
+        border: var(--borda) solid #000;
+        padding: var(--pad-y) var(--pad-x);
+        box-shadow: var(--drop-shadow);
+}
+
+    .slide-com-foto .caixa-texto .flow-shape{
+    float: right;
+    /* área total da moldura: conteúdo + padding + borda */
+    width: 0;
+    /* height: calc(var(--foto-h) + 2*var(--pad-y) + 2*var(--borda)); */
+    height: 0;
+
+    /* margin-top: var(--top-off); */
+    /* margin-right: var(--right-off); */
+    content: "";
+    display: block;
+    opacity: 0;
+    }
+
+    .header-carrossel .texto-header-carrossel span, .header-formulario .texto-header-formulario span {
+  font-family: "Micro 5", sans-serif;
+  font-weight: 600;
+  font-size: 1.8rem;
+
+  /*-webkit-text-stroke só funciona no Chrome/Edge/Safari, 
+  então simulamos o stroke com text-shadow*/
+  color: var(--cor-texto-paragrafo); /* cor do preenchimento */
+  text-shadow: none;
+}
+
+.titulo-slide {
+  font-family: "Micro 5", sans-serif;
+  font-weight: 600;
+  font-size: 2rem;
+
+  /*-webkit-text-stroke só funciona no Chrome/Edge/Safari, 
+  então simulamos o stroke com text-shadow*/
+  color: #000; /* cor do preenchimento */
+  text-shadow: none;
+}
+}
+
 
 /* implementação da borda gradiente */
 
@@ -367,7 +514,7 @@ header {
     border: 10px solid transparent;
     border-image: linear-gradient(to right, var(--borda-caixa-gradiente1), var(--borda-caixa-gradiente2)) 1;
     border-image-slice: 1;
-    padding: 30px;
+    padding: 1.5rem;
 }
 
 
@@ -378,7 +525,7 @@ header {
     height: 300px;
     width: 800px;
     background: #FFFFFF;
-    overflow-y: scroll;   /* apenas scroll vertical */
+    overflow-y: scroll;   /*apenas scroll vertical*/
     overflow-x: hidden;   /* remove o scroll horizontal */
 }
 
@@ -497,17 +644,17 @@ header {
 /*          Mudando Cor e Tamanho            */
 .cartoes_integrantes .p_nome {
     color: #000000;
-    font-size: 10px;
+    font-size: 0.5rem;
 }
 
 .cartoes_integrantes .p_curso {
     color: #7e1ebe;
-    font-size: 9px;
+    font-size: 0.4rem;
 }
 
 .cartoes_integrantes .p_ingresso {
     color: #636363;
-    font-size: 8px;
+    font-size: 0.4rem;
 }
 
 
@@ -523,6 +670,7 @@ footer {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    align-items: center;
     padding: 40px 16px;    
 }
 
@@ -664,15 +812,15 @@ das caixas também, mas, por hora, somente do formulário)*/
   }
   
   .campo-formulario label {
-    font-size: 14px;
+    /* font-size: 14px; */
   }
   
   .campo-formulario input,
   .campo-formulario textarea {
-    font-size: 14px;
+    /* font-size: 14px; */
   }
   
   #formulario_botao_enviar {
-    font-size: 14px;
+    font-size: 24px
   }
 }
