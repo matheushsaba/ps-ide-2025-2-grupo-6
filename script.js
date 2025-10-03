@@ -1,6 +1,6 @@
 import { eventoFormulario } from "./form.js";
 import { inicializarCarrossel } from "./carrossel.js";
-import { abrirMenuResponsivo, fecharMenuResponsivoAoClicar } from "./style.js";
+import { abrirMenuResponsivo, fecharMenuResponsivoAoClicar } from "./header.js";
 import { carregarIntegrantes } from "./integrantes.js";
 
 document.addEventListener('DOMContentLoaded', () => {
