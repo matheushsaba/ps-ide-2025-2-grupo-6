@@ -204,15 +204,33 @@
 
     <span class="ancora" id="contate-nos"></span>
     <div class="caixa formulario">
+      <!-- Cabeçalho do formulário -->
+      <div class="header-formulario">
+        <div class="texto-header-formulario">
+          <span>Contate-nos</span>
+        </div>
+      </div>
+      
+      <!-- Formulário -->
       <form id="formulario_contato" method="POST">
-        <label for="formulario_nome_input" >Nome: </label>
-        <input type="text" id = "formulario_nome_input" name = "formulario_nome_input" required>
+        <div class="campo-formulario">
+          <label for="formulario_nome_input">Nome:</label>
+          <input type="text" id="formulario_nome_input" name="formulario_nome_input" >
+          <span class="aviso-erro" id="erro_nome" >Digite um nome</span>
+        </div>
         
-        <label for="formulario_email_input">Email: </label>
-        <input type="text" id = "formulario_email_input" name="formulario_email_input" required>
+        <div class="campo-formulario">
+          <label for="formulario_email_input">Email:</label>
+          <input type="email" id="formulario_email_input" name="formulario_email_input" >
+          <span class="aviso-erro" id="erro_email" >Digite um email válido</span>
+        </div>
         
-        <label for="formulario_mensagem_input">Mensagem: </label>
-        <textarea id = "formulario_mensagem_input" rows="4" cols="50" placeholder ="Digite algo..."></textarea>
+        <div class="campo-formulario">
+          <label for="formulario_mensagem_input">Mensagem:</label>
+          <textarea id="formulario_mensagem_input" rows="8" placeholder="Digite algo..."></textarea>
+          <span class="aviso-erro" id="erro_mensagem" >Digite uma mensagem</span>
+        </div>
+        
         <button type="submit" id="formulario_botao_enviar">Enviar</button>
       </form>
     </div>

@@ -256,7 +256,7 @@ header {
   opacity: 0;
 }
 
-.header-carrossel {
+.header-carrossel, .header-formulario {
   display: flex;
   align-items: center;
   margin: 12px 12px;
@@ -265,7 +265,7 @@ header {
   border: 1px solid #000;
 }
 
-.texto-header-carrossel {
+.texto-header-carrossel, .texto-header-formulario {
   background: #fff;
   border: 2px solid #000;
   border-radius: 0 16px 16px 0 / 0 50% 50% 0;
@@ -275,7 +275,7 @@ header {
   display: inline-block;
 }
 
-.header-carrossel .texto-header-carrossel span {
+.header-carrossel .texto-header-carrossel span, .header-formulario .texto-header-formulario span {
   font-family: "Micro 5", sans-serif;
   font-weight: 400;
   font-size: 36px;
@@ -545,4 +545,134 @@ footer {
 .footer-links a:hover i {
   cursor: pointer;     
   transform: scale(1.2);
+}
+
+/* Estilizaçao do formulario        */
+
+/* Container principal do formulário */
+.formulario {
+  padding: 0;
+  margin: 40px auto;
+  width: 800px;
+  background: var(--cor-fundo-caixa);
+  border: 2px solid #000;
+}
+
+/* Formulário do fim da página*/
+#formulario_contato {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Campos do formulário (nome, email, mensagem) */
+.campo-formulario {
+  margin-bottom: 15px;
+}
+
+/* Onde está escrito "nome", "email", "mensagem" */
+.campo-formulario label {
+  display: block;
+  font-family: "Micro 5", sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  color: #000;
+  margin-bottom: 5px;
+  padding: 5px 0;
+  background: transparent;
+}
+
+/* Inputs e textarea */
+.campo-formulario input,
+.campo-formulario textarea {
+  width: 100%;
+  padding: 8px 12px;
+  border: 2px solid #000;
+  background: #fff;
+  font-family: "Pixelify Sans", sans-serif;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+/* Quando usuário seleciona o input que está escrevendo no formulário, mudar de cor a caixa selecionada */
+.campo-formulario input:focus,
+.campo-formulario textarea:focus {
+  border-color: var(--borda-caixa-gradiente1);
+  box-shadow: 1px 1px 8px rgba(96, 74, 188, 0.3);
+  /* Precisamos dessa propriedade para o navegador nao sobrescrever estilo anterior da borda */
+  outline: none;
+}
+
+
+.campo-formulario textarea {
+  /* altura mínima para não ficar muito pequena */
+  min-height: 120px;
+  font-family: "Pixelify Sans", sans-serif;
+}
+
+/* Mensagens de erro do formulário */
+.aviso-erro {
+  display: none;
+  color: #ff4444;
+  font-family: "Pixelify Sans", sans-serif;
+  font-size: 14px;
+  margin-top: 5px;
+  font-weight: 500;
+}
+
+.aviso-erro-ativo{
+  display: block;
+}
+
+#formulario_botao_enviar {
+  /* para que fique do tamanho de seu conteudo e alinhado ao inicio: flex-start */
+  align-self: flex-start;
+  padding: 10px 20px;
+  background: #D9D9D9;
+  border: 2px solid #000;
+  font-family: "Micro 5", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #000;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: transform 0.3s ease;
+}
+
+/* efeito de passar mouse em cima do botão */
+#formulario_botao_enviar:hover {
+  background: var(--borda-caixa-gradiente1);
+  transform: scale(1.08);
+}
+
+/* Efeito de "shrink", de clique, no botão */
+#formulario_botao_enviar:active {
+  transform: translateY(0);
+}
+
+/* Responsividade do formulário (acredito que futuramente, será do resto 
+das caixas também, mas, por hora, somente do formulário)*/
+@media (max-width: 800px) {
+  .formulario {
+    min-width: 300px;
+    max-width: 95%;
+    margin: 20px auto;
+  }
+  
+  .header-formulario .texto-header-formulario span {
+    font-size: 24px;
+  }
+  
+  .campo-formulario label {
+    font-size: 14px;
+  }
+  
+  .campo-formulario input,
+  .campo-formulario textarea {
+    font-size: 14px;
+  }
+  
+  #formulario_botao_enviar {
+    font-size: 14px;
+  }
 }
