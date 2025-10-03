@@ -702,4 +702,7 @@ das caixas também, mas, por hora, somente do formulário)*/
   .caixa-texto ul {
     margin-left: 10px;
   }
+  .link_caixa {
+    font-size: 15px;
+  }
 }
