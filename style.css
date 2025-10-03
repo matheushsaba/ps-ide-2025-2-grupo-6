@@ -812,15 +812,15 @@ das caixas também, mas, por hora, somente do formulário)*/
   }
   
   .campo-formulario label {
-    /* font-size: 14px; */
+    font-size: 14px;
   }
   
   .campo-formulario input,
   .campo-formulario textarea {
-    /* font-size: 14px; */
+    font-size: 14px;
   }
   
   #formulario_botao_enviar {
-    font-size: 24px
+    font-size: 14px;
   }
 }
