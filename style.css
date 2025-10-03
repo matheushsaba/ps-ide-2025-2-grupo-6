@@ -347,6 +347,148 @@ header {
     padding: 30px;
 }
 
+
+/* ----------------------------------- */
+/* ESTILIZAÇÃO JANELA DE INTEGRANTES   */
+/* ----------------------------------- */
+.janela {
+    height: 300px;
+    width: 800px;
+    background: #FFFFFF;
+    overflow-y: scroll;   /* apenas scroll vertical */
+    overflow-x: hidden;   /* remove o scroll horizontal */
+}
+
+/* Barra de Scroll Vertical */
+.janela::-webkit-scrollbar {
+    width: 20px;
+    background: #ccc;
+}
+
+/* Track */
+.janela::-webkit-scrollbar-track {
+    background: #999;
+    border: 5px solid #ccc; /* cria “margem” cinza em volta */
+    box-shadow: inset 1px 1px 2px #666;
+}
+
+/* Handle */
+.janela::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom, #ff5db1, #be16d0);
+    border-radius: 3px;
+    border: 2px solid #666;
+    box-shadow: inset 1px 1px 3px rgba(255, 255, 255, 0.7);
+}
+
+/* Handle on Hover */
+.janela::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(to bottom, #ff3ca1, #951bcd);
+}
+
+/* Botões de seta ↑ ↓ */
+.janela::-webkit-scrollbar-button:single-button:vertical:decrement {
+    background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='20' height='20'><polygon points='10,7 7,13 13,13' fill='black'/></svg>") no-repeat center #ccc;
+    height: 20px;
+    box-shadow: 
+        inset -3px -3px 0px rgba(0,0,0,0.4),   /* sombra inferior-direita (↘) */
+        inset 3px 3px 0px rgba(255, 255, 255, 0.649); /* brilho superior-esquerda (↖) */
+}
+
+.janela::-webkit-scrollbar-button:single-button:vertical:increment {
+    background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='20' height='20'><polygon points='7,7 13,7 10,13' fill='black'/></svg>") no-repeat center #ccc;
+    height: 20px;
+    box-shadow: 
+        inset -3px -3px 0px rgba(0,0,0,0.4),   /* sombra inferior-direita (↘) */
+        inset 3px 3px 0px rgba(255, 255, 255, 0.649); /* brilho superior-esquerda (↖) */
+}
+
+/* Botões de seta ↑ ↓ on Hover */
+.janela::-webkit-scrollbar-button:single-button:vertical:decrement:hover {
+    background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='20' height='20'><polygon points='10,7 7,13 13,13' fill='black'/></svg>") no-repeat center #e7e7e7;
+    box-shadow: 
+        inset -3px -3px 0px rgba(0,0,0,0.4),   /* sombra inferior-direita (↘) */
+        inset 3px 3px 0px rgba(255, 255, 255, 0.649); /* brilho superior-esquerda (↖) */
+}
+
+.janela::-webkit-scrollbar-button:single-button:vertical:increment:hover {
+    background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='20' height='20'><polygon points='7,7 13,7 10,13' fill='black'/></svg>") no-repeat center #e7e7e7;
+    height: 20px;
+    box-shadow: 
+        inset -3px -3px 0px rgba(0,0,0,0.4),   /* sombra inferior-direita (↘) */
+        inset 3px 3px 0px rgba(255, 255, 255, 0.649); /* brilho superior-esquerda (↖) */
+}
+
+/* ----------------------------------- */
+/* ESTILIZAÇÃO CARTÕES DE INTEGRANTES  */
+/* ----------------------------------- */
+/* Container - Grid com 4 Integrantes por Linha */
+.container_integrantes {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 por linha */
+    gap: 20px;
+    padding: 20px;
+}
+
+.cartoes_integrantes {
+    background: #D9D9D9;
+    box-shadow: 6px 6px 6px -3px rgba(0,0,0,0.4);
+    width: 170px;
+    padding: 15px;
+    overflow: hidden;
+    text-align: center; /* centraliza o conteúdo */
+    opacity: 0; /* Não aparece inicialmente */
+    transform: translateY(20px);
+    transition: all 1s ease;
+}
+
+.cartoes_integrantes.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.cartoes_integrantes p{
+    margin: 5px 0; /* cada <p> em sua linha */
+    font-family: "Press Start 2P", system-ui; /* Setar fonte */
+    font-weight: 400;
+    font-style: normal;
+}
+
+.cartoes_integrantes img{
+    max-width: 100%;
+    object-fit: cover;             /* corta/centraliza, mantém proporção */
+    margin-bottom: 10px;
+    transition: transform 0.5s ease;
+    transform-origin: bottom center; /* fixa a parte inferior */
+}
+
+.cartoes_integrantes:hover {
+    box-shadow: 0px 0px 25px rgba(133, 35, 183, 0.605); /* sombra roxa em toda volta */
+    background: #fbfbfb; /* muda o fundo do cartão */
+}
+
+.cartoes_integrantes:hover img{
+    transform: scale(1.05); /* aumenta a imagem em 5%*/
+}
+
+/* Estilização <p> de nome, curso e ingresso */
+/*          Mudando Cor e Tamanho            */
+.cartoes_integrantes .p_nome {
+    color: #000000;
+    font-size: 10px;
+}
+
+.cartoes_integrantes .p_curso {
+    color: #7e1ebe;
+    font-size: 9px;
+}
+
+.cartoes_integrantes .p_ingresso {
+    color: #636363;
+    font-size: 8px;
+}
+
+
+
 /* Estilização do rodapé */
 
 footer {
