@@ -681,4 +681,25 @@ das caixas também, mas, por hora, somente do formulário)*/
   .header-formulario .texto-header-formulario span {
     font-size: 30px !important;
   }
+  .caixa-texto {
+    min-width: unset;
+    max-width: 100%;
+    width: 100%;
+    margin: 16px 0;
+    font-size: 16px;
+  }
+  .borda-gradiente {
+    padding: 12px;
+  }
+  .caixa-texto h1 {
+    font-size: 24px;
+    margin-bottom: 18px;
+  }
+  .caixa-texto p,
+  .caixa-texto li span {
+    font-size: 15px;
+  }
+  .caixa-texto ul {
+    margin-left: 10px;
+  }
 }
