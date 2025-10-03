@@ -4,6 +4,7 @@ function inicializarCarrossel() {
     const prevButton = carousel.querySelector('#botaoAnterior');
     const nextButton = carousel.querySelector('#botaoSeguinte');
     const scrollThumb = carousel.querySelector('#barraThumb');
+    const mediaQueryList = window.matchMedia("(max-width: 1000px)");
 
     let currentSlideIndex = 0;
     const totalSlides = slides.length;
@@ -27,11 +28,17 @@ function inicializarCarrossel() {
 
         // Esconde os slides inativos
         slides.forEach((slide) => {
-            slide.style.display = 'none';
+
+                slide.style.display = 'none';
+    
         });
 
         // Mostra o slide ativo
-        slides[currentSlideIndex].style.display = 'block';
+        if(mediaQueryList.matches){
+            slides[currentSlideIndex].style.display = 'flex';
+        } else {
+            slides[currentSlideIndex].style.display = 'block';
+        }
 
         updateScrollThumb();
     }
