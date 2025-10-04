@@ -1,153 +1,197 @@
 <div class="cartoes_integrantes">
     <img src="images\grid-integrantes\00-Kamille Pimentel.png" alt="Imagem Kamile">
+    <div>
         <p class="p_nome">Kamille Pimentel</p>
         <p class="p_curso">Ciência da Computação</p>
         <p class="p_ingresso">Ingresso na faculdade: 2022/1</p>
+    </div>
 </div>
 
 <div class="cartoes_integrantes">
     <img src="images\grid-integrantes\01-Luana Hahn.png" alt="Imagem Luana">
+    <div>
         <p class="p_nome">Luana Hahn</p>
         <p class="p_curso">Ciência da Computação</p>
         <p class="p_ingresso">Ingresso na faculdade: 2021/1</p>
+    </div>
 </div>
 
 <div class="cartoes_integrantes">
     <img src="images\grid-integrantes\02-Kathleen Hoff.png" alt="Imagem Kathellen">
+    <div>
         <p class="p_nome">Kathleen Hoff (Kath)</p>
         <p class="p_curso">Ciência da Computação</p>
         <p class="p_ingresso">Ingresso na faculdade: 2020/2</p>
+    </div>
 </div>
 
 <div class="cartoes_integrantes">
     <img src="images\grid-integrantes\03-Thais Marcelle.png" alt="Imagem Thais">
+    <div>
         <p class="p_nome">Thais Marcelle (Marti)</p>
         <p class="p_curso">Engenharia da Computação</p>
         <p class="p_ingresso">Ingresso na faculdade: 2022/1</p>
+    </div>
 </div>
 
 <div class="cartoes_integrantes">
     <img src="images\grid-integrantes\04-Luma Beserra.png" alt="Imagem Luma">
+    <div>
         <p class="p_nome">Luma Beserra</p>
         <p class="p_curso">Ciência da Computação</p>
         <p></p>
+    </div>
 </div>
 
 <div class="cartoes_integrantes">
     <img src="images\grid-integrantes\05-Milena Silva Braga.png" alt="Imagem Milena">
+    <div>
         <p class="p_nome">Milena Silva Braga</p>
         <p class="p_curso">Ciência da Computação</p>
         <p class="p_ingresso">Ingresso na faculdade: 2019/2</p>
+    </div>
 </div>
 
 <div class="cartoes_integrantes">
     <img src="images\grid-integrantes\06-Ingrid Murielem.png" alt="Imagem Ingrid">
+    <div>
         <p class="p_nome">Ingrid Murielem</p>
         <p class="p_curso">Ciência da Computação</p>
         <p></p>
+    </div>
 </div>
 
 <div class="cartoes_integrantes">
     <img src="images\grid-integrantes\07-Julianne Emanuelle Martins.png" alt="Imagem Julianne">
+    <div>
         <p class="p_nome">Julianne Emanuelle Martins</p>
         <p class="p_curso">Ciência da Computação</p>
         <p class="p_ingresso">Ingresso na faculdade: 2022/1</p>
+    </div>
 </div>
 
 <div class="cartoes_integrantes">
     <img src="images\grid-integrantes\08-Juliana Schmitt.png" alt="Imagem Juliana">
+    <div>
         <p class="p_nome">Juliana Schmitt</p>
         <p class="p_curso">Ciência da Computação</p>
         <p></p>
+    </div>
 </div>
 
 <div class="cartoes_integrantes">
     <img src="images\grid-integrantes\09-Maria Flávia Borrajo Tondo.png" alt="Imagem Maria">
+    <div>
         <p class="p_nome">Maria Flávia Borrajo Tondo</p>
         <p class="p_curso">Mestrado</p>
         <p class="p_ingresso">Ingresso na faculdade: 2023/2</p>
+    </div>
 </div>
 
 <div class="cartoes_integrantes">
     <img src="images\grid-integrantes\10-Joana Campos.png" alt="Imagem Joana">
+    <div>
         <p class="p_nome">Joana Campos</p>
         <p class="p_curso">Ciência da Computação</p>
         <p class="p_ingresso">Ingresso na faculdade: 2021/1</p>
+    </div>
 </div>
 
 <div class="cartoes_integrantes">
     <img src="images\grid-integrantes\11-Gisele Rotta .png" alt="Imagem Gisele ">
+    <div>
         <p class="p_nome">Gisele Rotta</p>
         <p class="p_curso">Ciência da Computação</p>
         <p class="p_ingresso">Ingresso na faculdade: 2023/1</p>
+    </div>
 </div>
 
 <div class="cartoes_integrantes">
     <img src="images\grid-integrantes\12-Laura Grippa.png" alt="Imagem Laura Grippa">
+    <div>
         <p class="p_nome">Laura Grippa</p>
         <p class="p_curso">Ciência da Computação</p>
         <p class="p_ingresso">Ingresso na faculdade: 2018/1</p>
+    </div>
 </div>
 
 <div class="cartoes_integrantes">
     <img src="images\grid-integrantes\13-Lissa Manami Adate.png" alt="Imagem Lissa">
+    <div>
         <p class="p_nome">Lissa Manami Adate</p>
         <p class="p_curso">Ciência da Computação</p>
         <p class="p_ingresso">Ingresso na faculdade: 2023/2</p>
+    </div>
 </div>
 
 <div class="cartoes_integrantes">
     <img src="images\grid-integrantes\14-Bruna Schmidt.png" alt="Imagem Bruna">
+    <div>
         <p class="p_nome">Bruna Schmidt</p>
         <p class="p_curso">Engenharia da Computação</p>
         <p class="p_ingresso">Ingresso na faculdade: 2023/1</p>
+    </div>
 </div>
 
 <div class="cartoes_integrantes">
     <img src="images\grid-integrantes\15-Sofia Popsin Gomes.png" alt="Imagem Sofia">
+    <div>
         <p class="p_nome">Sofia Popsin Gomes</p>
         <p class="p_curso">Engenharia da Computação</p>
         <p class="p_ingresso">Ingresso na faculdade: 2019/2</p>
+    </div>
 </div>
 
 <div class="cartoes_integrantes">
     <img src="images\grid-integrantes\16-Elisa Cristini.png" alt="Imagem Elisa">
+    <div>
         <p class="p_nome">Elisa Cristini </p>
         <p class="p_curso">Engenharia da Computação</p>
         <p class="p_ingresso">Ingresso na faculdade: 2023/2</p>
+    </div>
 </div>
 
 <div class="cartoes_integrantes">
     <img src="images\grid-integrantes\17-Jade Hatanaka.png" alt="Imagem Jade">
+    <div>
         <p class="p_nome">Jade Hatanaka</p>
         <p class="p_curso">Ciência da Computação</p>
         <p class="p_ingresso">Ingresso na faculdade: 2021/1</p>
+    </div>
 </div>
 
 <div class="cartoes_integrantes">
     <img src="images\grid-integrantes\18-Leticia Santos Machado.png" alt="Imagem Leticia">
+    <div>
         <p class="p_nome">Leticia Santos Machado</p>
         <p class="p_curso">Ciência da Computação</p>
         <p></p>
+    </div>
 </div>
 
 <div class="cartoes_integrantes">
     <img src="images\grid-integrantes\19-Isis Burmeister Pericolo.png" alt="Imagem Isis">
+    <div>
         <p class="p_nome">Isis Burmeister Pericolo</p>
         <p class="p_curso">Ciência da Computação</p>
         <p class="p_ingresso">Ingresso na faculdade: 2018/1</p>
+    </div>
 </div>
 
 <div class="cartoes_integrantes">
     <img src="images\grid-integrantes\20-Mariana Kaori.png" alt="Imagem Mariana">
+    <div>
         <p class="p_nome">Mariana Kaori</p>
         <p class="p_curso">Engenharia da Computação</p>
         <p class="p_ingresso">Ingresso na faculdade: 2020/1</p>
+    </div>
 </div>
 
 <div class="cartoes_integrantes">
     <img src="images\grid-integrantes\21-Laura Keidann.png" alt="Imagem Laura Keidann">
+    <div>
         <p class="p_nome">Laura Keidann</p>
         <p class="p_curso">Ciência da Computação</p>
         <p></p>
+    </div>
 </div>
