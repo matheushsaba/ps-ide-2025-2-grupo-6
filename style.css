@@ -409,8 +409,8 @@ header {
 }
 
 /* Ajuste feito no JS para que o overlap da borda do thumb fique correto */
-.barra-thumb.is-first{ margin: -1px 0 0 -1px; }
-.barra-thumb.is-last{ margin: -1px 0 0 2px;  }
+.barra-thumb.primeiro{ margin: -1px 0 0 -1px; }
+.barra-thumb.ultimo{ margin: -1px 0 0 2px;  }
 
 @media (max-width: 1000px) {
 

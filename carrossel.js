@@ -46,11 +46,11 @@ function inicializarCarrossel() {
         scrollThumb.style.left = leftPercent + '%';
 
         // Atualiza classes para ajustar o overlap da borda do thumb com os botões
-        scrollThumb.classList.remove('is-first', 'is-last');
+        scrollThumb.classList.remove('primeiro', 'ultimo');
         if (currentSlideIndex === 0) {
-            scrollThumb.classList.add('is-first');
+            scrollThumb.classList.add('primeiro');
         } else if (currentSlideIndex === totalSlides - 1) {
-            scrollThumb.classList.add('is-last');
+            scrollThumb.classList.add('ultimo');
         }
     }
 
