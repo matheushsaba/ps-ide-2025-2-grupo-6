@@ -245,7 +245,9 @@ header {
     color: var(--cor-texto-paragrafo);
 }
 
-/* Estilização do carrossel */
+/* ----------------------------------- */
+/* ESTILIZAÇÃO DO CARROSSEL            */
+/* ----------------------------------- */
 #carrossel {
     min-width: 800px;
 }
@@ -279,13 +281,13 @@ header {
 }
 
 .slide-com-foto .imagem-slide {
-  position: absolute;
+  position: absolute; /* Posicionada em relação ao .carrossel */
   top: var(--top-off);
   right: var(--right-off);
   z-index: 5;
   width: var(--foto-w);
   height: var(--foto-h);
-  object-fit: cover;
+  object-fit: cover; /* Cobre a área sem distorcer. */
   background: #fff;
   border: var(--borda) solid #000;
   padding: var(--pad-y) var(--pad-x);
@@ -295,15 +297,18 @@ header {
 /* Elemento invisível que faz com que o texto contorne a imagem */
 .slide-com-foto .caixa-texto .flow-shape{
   float: right;
-  /* área total da moldura: conteúdo + padding + borda */
+  /* A largura é calculada para corresponder ao espaço total ocupado pela imagem. */
+  /* Área total: foto + padding + borda */
   width: calc(var(--foto-w) + 2*var(--pad-x) + 2*var(--borda));
   height: 8rem;
-
   content: "";
   display: block;
   opacity: 0;
-}
 
+  /* Apenas para debug */
+  /* opacity: 100;  */
+  /* background-color: #000; */
+}
 
 .header-carrossel, .header-formulario {
   display: flex;
@@ -484,7 +489,6 @@ header {
         text-shadow: none;
     }
 }
-
 
 /* implementação da borda gradiente */
 
