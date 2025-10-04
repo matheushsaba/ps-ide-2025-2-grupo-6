@@ -299,7 +299,7 @@ header {
   float: right;
   /* área total da moldura: conteúdo + padding + borda */
   width: calc(var(--foto-w) + 2*var(--pad-x) + 2*var(--borda));
-  height: 6rem;
+  height: 8rem;
 
   content: "";
   display: block;
@@ -410,7 +410,6 @@ header {
   transition: left 180ms ease;
 }
 
-
 @media (max-width: 1000px) {
 
     #carrossel {
@@ -436,7 +435,6 @@ header {
     .slide .caixa-texto {
         flex-grow: 1;
     }
-
 
     .slide-com-foto .imagem-slide {
         display: none;
