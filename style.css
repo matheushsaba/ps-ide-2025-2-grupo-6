@@ -853,8 +853,7 @@ footer {
   transform: translateY(0);
 }
 
-/* Responsividade do formulário (acredito que futuramente, será do resto 
-das caixas também, mas, por hora, somente do formulário)*/
+/* Responsividade do formulário */
 @media (max-width: 800px) {
   .formulario {
     min-width: 300px;
@@ -866,16 +865,13 @@ das caixas também, mas, por hora, somente do formulário)*/
     font-size: 24px;
   }
   
+  #formulario_botao_enviar,
   .campo-formulario label {
-    font-size: 14px;
+    font-size: 24px;
   }
   
   .campo-formulario input,
   .campo-formulario textarea {
-    font-size: 14px;
-  }
-  
-  #formulario_botao_enviar {
     font-size: 14px;
   }
 }
