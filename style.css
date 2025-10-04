@@ -132,7 +132,7 @@ header {
     }
 
     header {
-        height: 15vh;
+        height: 10vh;
     }
  
   
@@ -422,10 +422,11 @@ header {
     #carrossel {
         max-width: 85vw;
         min-width: 100px;
+        width: 100%;
     }
 
     .carrossel {
-        min-height: 27rem;
+        min-height: 22rem;
     }
 
     .slide-sem-foto{
@@ -487,6 +488,12 @@ header {
         então simulamos o stroke com text-shadow*/
         color: #000;
         text-shadow: none;
+    }
+}
+
+@media (max-width: 420px) {
+    .carrossel {
+        min-height: 27rem;
     }
 }
 
@@ -605,6 +612,7 @@ header {
     font-family: "Press Start 2P", system-ui; /* Setar fonte especial*/
     font-weight: 400;
     font-style: normal;
+    line-height: 1.25;
 }
 
 .cartoes_integrantes img{
@@ -665,7 +673,7 @@ header {
     }
 
     .container_integrantes {
-        grid-template-columns: repeat(1, 1fr); /* 4 por linha */
+        grid-template-columns: repeat(1, 1fr); /* 1 por linha */
     }
 
     .cartoes_integrantes {
@@ -673,7 +681,7 @@ header {
         align-items: center;        /* alinha verticalmente */
         width: 100%;
         max-width: 95vw;
-        height: 28vw;
+        height: 32vw;
     }
 
     .cartoes_integrantes img {
@@ -687,6 +695,7 @@ header {
         font-family: "Press Start 2P", system-ui; /* Setar fonte */
         font-weight: 400;
         font-style: normal;
+        padding-bottom: 2px;
     }
 
     .cartoes_integrantes .p_nome {
@@ -846,8 +855,7 @@ footer {
   transform: translateY(0);
 }
 
-/* Responsividade do formulário (acredito que futuramente, será do resto 
-das caixas também, mas, por hora, somente do formulário)*/
+/* Responsividade do formulário */
 @media (max-width: 800px) {
   .formulario {
     min-width: 300px;
@@ -859,16 +867,13 @@ das caixas também, mas, por hora, somente do formulário)*/
     font-size: 24px;
   }
   
+  #formulario_botao_enviar,
   .campo-formulario label {
-    font-size: 14px;
+    font-size: 24px;
   }
   
   .campo-formulario input,
   .campo-formulario textarea {
-    font-size: 14px;
-  }
-  
-  #formulario_botao_enviar {
     font-size: 14px;
   }
 }
