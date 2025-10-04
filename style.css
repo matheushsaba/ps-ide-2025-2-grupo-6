@@ -271,9 +271,7 @@ header {
   --top-off: -32px;
   --right-off: -10px;
   --drop-shadow: -4px 4px 4px 0px #EC20D240;
-
   padding: 0;
-
 }
 
 .slide .caixa {
@@ -406,9 +404,13 @@ header {
   height: 22px;
   background-image: linear-gradient(to right, var(--trilho-scroll-gradiente1) 0%, var(--trilho-scroll-gradiente2) 100%);
   border: 1px solid var(--borda, #000);
-  margin: -1px -0;
+  margin: -1px 0px 0px -1px;
   transition: left 180ms ease;
 }
+
+/* Ajuste feito no JS para que o overlap da borda do thumb fique correto */
+.barra-thumb.is-first{ margin: -1px 0 0 -1px; }
+.barra-thumb.is-last{ margin: -1px 0 0 2px;  }
 
 @media (max-width: 1000px) {
 

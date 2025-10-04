@@ -28,9 +28,7 @@ function inicializarCarrossel() {
 
         // Esconde os slides inativos
         slides.forEach((slide) => {
-
-                slide.style.display = 'none';
-    
+            slide.style.display = 'none';
         });
 
         // Mostra o slide ativo
@@ -46,6 +44,14 @@ function inicializarCarrossel() {
     function updateScrollThumb() {
         const leftPercent = stepPercent * currentSlideIndex;
         scrollThumb.style.left = leftPercent + '%';
+
+        // Atualiza classes para ajustar o overlap da borda do thumb com os botões
+        scrollThumb.classList.remove('is-first', 'is-last');
+        if (currentSlideIndex === 0) {
+            scrollThumb.classList.add('is-first');
+        } else if (currentSlideIndex === totalSlides - 1) {
+            scrollThumb.classList.add('is-last');
+        }
     }
 
     nextButton.addEventListener('click', () => {
