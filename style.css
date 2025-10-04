@@ -373,7 +373,6 @@ header {
   grid-template-columns: auto 1fr auto;
   align-items: center;
   height: 22px;
-  /* margin: -1px 12px 20px 12px; */
 }
 
 .barra-scroll-horizontal .slide-anterior,
