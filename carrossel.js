@@ -8,8 +8,9 @@ function inicializarCarrossel() {
 
     let currentSlideIndex = 0;
     const totalSlides = slides.length;
-    const stepPercent = totalSlides > 0 ? (100 / totalSlides) : 100;
+    const stepPercent = totalSlides > 0 ? (100 / totalSlides) : 100; // Percentual que cada passo do thumb deve percorrer
 
+    // Define a largura do thumb proporcional ao total de slides
     if (scrollThumb) {
         scrollThumb.style.width = stepPercent + '%';
     }
@@ -26,12 +27,12 @@ function inicializarCarrossel() {
             currentSlideIndex = index;
         }
 
-        // Esconde os slides inativos
+        // Esconde todos slides
         slides.forEach((slide) => {
             slide.style.display = 'none';
         });
 
-        // Mostra o slide ativo
+        // Ativa o slide do index atual
         if(mediaQueryList.matches){
             slides[currentSlideIndex].style.display = 'flex';
         } else {
@@ -42,6 +43,7 @@ function inicializarCarrossel() {
     }
 
     function updateScrollThumb() {
+        // Calcula deslocamento do thumb em porcentagem (0% -> início do trilho)
         const leftPercent = stepPercent * currentSlideIndex;
         scrollThumb.style.left = leftPercent + '%';
 
