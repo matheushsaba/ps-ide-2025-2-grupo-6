@@ -505,9 +505,10 @@ header {
 /* ----------------------------------- */
 .janela {
     height: 300px;
-    width: 800px;
+    max-width: 800px;
+    min-width: 600px;
     background: #FFFFFF;
-    overflow-y: scroll;   /*apenas scroll vertical*/
+    overflow-y: scroll;   /* apenas scroll vertical */
     overflow-x: hidden;   /* remove o scroll horizontal */
 }
 
@@ -584,10 +585,11 @@ header {
 .cartoes_integrantes {
     background: #D9D9D9;
     box-shadow: 6px 6px 6px -3px rgba(0,0,0,0.4);
-    width: 170px;
+    width: 98%;
+    max-width: 167px;
     padding: 15px;
     overflow: hidden;
-    text-align: center; /* centraliza o conteúdo */
+    text-align: center; 
     opacity: 0; /* Não aparece inicialmente */
     transform: translateY(20px);
     transition: all 1s ease;
@@ -600,7 +602,7 @@ header {
 
 .cartoes_integrantes p{
     margin: 5px 0; /* cada <p> em sua linha */
-    font-family: "Press Start 2P", system-ui; /* Setar fonte */
+    font-family: "Press Start 2P", system-ui; /* Setar fonte especial*/
     font-weight: 400;
     font-style: normal;
 }
@@ -626,17 +628,81 @@ header {
 /*          Mudando Cor e Tamanho            */
 .cartoes_integrantes .p_nome {
     color: #000000;
-    font-size: 0.5rem;
+    font-size: 0.6rem;
 }
 
 .cartoes_integrantes .p_curso {
     color: #7e1ebe;
-    font-size: 0.4rem;
+    font-size: 0.5rem;
 }
 
 .cartoes_integrantes .p_ingresso {
     color: #636363;
     font-size: 0.4rem;
+}
+
+/* -------------------------------------- */
+/*  PORTABILIDADE INTEGRANTES             */
+/* -------------------------------------- */
+@media (max-width: 1000px){
+    /* Não sei o que houve, tava dando problema com o .caixa, */
+    /* depois que botei isso funcionou e fez o mesmo ajuste   */
+    #integrantes {
+        width: 100%
+    }
+    
+    .janela {
+        max-width: 85vw;
+        min-width: 100px;
+    }
+}
+
+@media (max-width: 700px){
+    .janela {
+        height: 500px;
+        width: 100%;
+        min-width: 70vw;
+    }
+
+    .container_integrantes {
+        grid-template-columns: repeat(1, 1fr); /* 4 por linha */
+    }
+
+    .cartoes_integrantes {
+        display: flex;              /* ativa layout flex */
+        align-items: center;        /* alinha verticalmente */
+        width: 100%;
+        max-width: 95vw;
+        height: 28vw;
+    }
+
+    .cartoes_integrantes img {
+        width: 22vw;              
+        object-fit: cover;          /* mantém proporção e corta excesso */
+    }
+
+    .cartoes_integrantes p {
+        margin: 5px 0; /* cada <p> em sua linha */
+        padding-left: 4vw;
+        font-family: "Press Start 2P", system-ui; /* Setar fonte */
+        font-weight: 400;
+        font-style: normal;
+    }
+
+    .cartoes_integrantes .p_nome {
+        color: #000000;
+        font-size: 0.8rem;
+    }
+
+    .cartoes_integrantes .p_curso {
+        color: #7e1ebe;
+        font-size: 0.7rem;
+    }
+
+    .cartoes_integrantes .p_ingresso {
+        color: #636363;
+        font-size: 0.6rem;
+    }
 }
 
 
