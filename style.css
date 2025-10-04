@@ -344,6 +344,7 @@ header {
 .slide .caixa-texto {
   padding: 1.2rem;
   border-width: 1px;
+  margin: -1px 0;
 }
 
 .titulo-slide {
