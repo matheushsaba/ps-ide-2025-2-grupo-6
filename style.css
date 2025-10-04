@@ -422,10 +422,11 @@ header {
     #carrossel {
         max-width: 85vw;
         min-width: 100px;
+        width: 100%;
     }
 
     .carrossel {
-        min-height: 27rem;
+        min-height: 22rem;
     }
 
     .slide-sem-foto{
@@ -487,6 +488,12 @@ header {
         então simulamos o stroke com text-shadow*/
         color: #000;
         text-shadow: none;
+    }
+}
+
+@media (max-width: 420px) {
+    .carrossel {
+        min-height: 27rem;
     }
 }
 
